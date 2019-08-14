@@ -6,30 +6,58 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="../unit-4-game/assets/css/reset.css">
     <link rel="stylesheet" type="text/css" href="../unit-4-game/assets/css/style.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
     <script src="../unit-4-game/assets/javascript/game.js"></script>
-    <title></title>
+    <title>DragonBallZ Game</title>
 </head>
 <body>
     <div class="blacktop">
         <h1 class="titletext">DragonBallZ "Crystal" Game</h1>
     </div>
     <div class="maingame">
+            <div class="titlescreen" id="introtext">
+                    <h1 class="h1">Welcome to Planet Namek</h1>
+                    <br>
+                    <br>
+                    <br>
+                    <h2 class="h2">You have gathered all 7 DragonBalls!</h2>
+                    <br>
+                    <h2 class="h2">To have Shenron grant your wish you must...</h2>
+                    <br>
+                    <br>
+                    <br>
+                    <h3 class="h3">Use the DragonBalls to match the number that Shenron gives you</h3>
+                    <br>
+                    <br>
+                    <h3 class="h3">Match the number 7 times to ask your wish</h3>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <input type="button" class="button" value="Play Game" onclick="startgame()">
+                    <br>
+                    <br>
+                    <br>
+                </div>
         <img src="../unit-4-game/assets/images/387102.jpg" class="backimage">
-        <div class="cloud1">
+        <div class="cloud">
+            <img class="onecloud" src="../unit-4-game/assets/images/cloud_burned.png">
         </div>
-        <div class="cloud2">
-
+        <div class="cloud">
+            <img class="twocloudone" src="../unit-4-game/assets/images/cloud_burned.png">
+            <img class="twocloudtwo" src="../unit-4-game/assets/images/cloud_burned.png">
         </div>
-        <div class="cloud3">
-
+        <div class="cloud">
+            <img class="threecloud" src="../unit-4-game/assets/images/cloud_burned.png">
         </div>
         <div class="shenron">
+            <img class="dragon" src="../unit-4-game/assets/images/kisspng-shenron-goku-vegeta-gohan-shenlong-dragon-ball-z-5ac87d038e1377.507242971523088643582.png">  
         </div>
         <div class="maincount">
 
         </div>
         <div class="playercount">
-
+            <h1 class="numbergoal" id="numbgoal">Number</h1>
         </div>
         <div class="db1">
             <input type="image" src="../unit-4-game/assets/images/dragonball1_burned.png" class="dbball"/>

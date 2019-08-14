@@ -14,11 +14,71 @@ body {
     height: 100%;
     z-index: -10;
 }
-.cloud1 {
-    background-image: url("../images/cloud_burned.png");
+.h1 {
+    margin: auto;
+    width: 90%;
+    font-size: 13em;
+    color: black;
+}
+.h2 {
+    margin: auto;
+    width: 95%;
+    font-size: 8.2em;
+    color: black;
+}
+.h3 {
+    margin: auto;
+    width: 70%;
+    font-size: 6em;
+    color: black;
+}
+.button:hover {
+    cursor: pointer;
+    box-shadow: 0px 5px 5px 15px #1900ff;
+}
+.button {
+    margin: auto;
+    font-size: 7em;
+    border: 3px solid black;
+    background: red;
+    padding: 0.3em;
+    border-radius: 10em;
+}
+.titlescreen {
     position: absolute;
-    top: 5em;
-    background-repeat: no-repeat;
+    border-radius: 15em;
+    color: white;
+    top: 11em;
+    left: 19em;
+    z-index: 20;
+    
+    text-align: center;
+    background-image: linear-gradient(to right, red, yellow, orange);
+}
+.cloud {
+   position: absolute;
+   top: 10em;
+   left: 10em;
+   display: none;
+}
+.shenron {
+    position: absolute;
+    z-index: -5;
+    left: 25em;
+    animation: dragon;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+    display: none;
+}
+@keyframes dragon {
+    0% {top: 0em;}
+    100% {top: 3em;}
+}
+.dragon {
+    height: 200%;
+    width: 200%;
+
 }
 .db1 {
     background-repeat: no-repeat;
@@ -26,12 +86,17 @@ body {
     bottom: 20em;
     left: 20em;
 }
+.dbball:hover {
+    box-shadow: 0px 5px 5px 15px #ffd900;
+    cursor: pointer;
+}
 .dbball {
     height: 20em;
     width: 20em;
     border: 1px solid black;
     background: black;
     border-radius: 100em;
+    display: none;
 }
 .db2 {
     background-repeat: no-repeat;
