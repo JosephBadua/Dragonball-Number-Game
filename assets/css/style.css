@@ -24,32 +24,50 @@ body {
     background-repeat: no-repeat;
     position: absolute;
     bottom: 20em;
-    left: 5em;
+    left: 20em;
 }
 .dbball {
     height: 20em;
     width: 20em;
+    border: 1px solid black;
+    background: black;
+    border-radius: 100em;
 }
 .db2 {
     background-repeat: no-repeat;
     position: absolute;
     bottom: 15em;
-    left: 25em;
+    left: 40em;
 }
 .db3 {
-
+    background-repeat: no-repeat;
+    position: absolute;
+    bottom: 10em;
+    left: 60em;
 }
 .db4 {
-
+    background-repeat: no-repeat;
+    position: absolute;
+    bottom: 5em;
+    left: 80em;
 }
 .db5 {
-
+    background-repeat: no-repeat;
+    position: absolute;
+    bottom: 10em;
+    left: 100em;
 }
 .db6 {
-
+    background-repeat: no-repeat;
+    position: absolute;
+    bottom: 15em;
+    left: 120em;
 }
 .db7 {
-
+    background-repeat: no-repeat;
+    position: absolute;
+    bottom: 20em;
+    left: 140em;
 }
 .blacktop {
     background: black;
@@ -70,4 +88,7 @@ body {
     height: 5em;
     position: absolute;
     bottom: 0px;
+}
+@keyframes ball {
+    
 }
