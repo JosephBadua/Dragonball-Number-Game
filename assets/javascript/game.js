@@ -12,24 +12,31 @@ var ballfive = 0
 var ballsix = 0
 var ballseven = 0
 
-var randomComputer = Math.floor(Math.random() * 700 + 120);
+var randomComputer = Math.floor(Math.random() * 10 + 100);
 var firstball = Math.floor(Math.random() * 10+1);
-var twoball = Math.floor(Math.random() * 25);
-var threeball = Math.floor(Math.random() * 50);
-var fourball = Math.floor(Math.random() * 75);
-var fiveball = Math.floor(Math.random() * 100);
-var sixball = Math.floor(Math.random() * 125);
-var sevenball = Math.floor(Math.random() * 150);
+var twoball = Math.floor(Math.random() * 10+1);
+var threeball = Math.floor(Math.random() * 10+1);
+var fourball = Math.floor(Math.random() * 10+1);
+var fiveball = Math.floor(Math.random() * 10+1);
+var sixball = Math.floor(Math.random() * 10+1);
+var sevenball = Math.floor(Math.random() * 10+1);
 
 
 
 computercount = randomComputer
 console.log(computercount);
+console.log(firstball);
+console.log(twoball);
+console.log(threeball);
+console.log(fourball);
+console.log(fiveball);
+console.log(sixball);
+console.log(sevenball);
 
 
 $(document).ready(function(){
     $(".shenron").hide();
-    $(".dbbal").hide();
+    $(".dbball").hide();
     $(".cloud").hide();
     $(".cloud1").hide();
     $(".maincount").hide();
@@ -39,14 +46,13 @@ $(document).ready(function(){
     $("#button").click(function() {
         $("#introtext").hide();
         $(".shenron").show();
-        $(".dbbal").show();
+        $(".dbball").show();
         $(".cloud").show();
         $(".cloud1").show();
         $(".maincount").show();
         $(".playercount").show();
         $(".maincount").show();
         $(".playercount").show();
-        $(".wishbutton").show();
         $(".score").show();        
         $("#wins").text("Wins " + wins);
         $("#losses").text("Losses: " + losses);
@@ -64,15 +70,15 @@ $(document).ready(function(){
             wins++;
             $("#wins").text("Wins: " + wins);
             reset();
-        } else if (computercount < playercount && tries > 0) {
+        } else if (computercount < playercount && tries > 1) {
             alert("You went over. Try again!");
             tries--;
             $("#tries").text("Tries: " + tries);
             reset();
-        } else if (computercount > playercount && tries === 0) {
+        } else if (computercount < playercount && tries == 1) {
             losses++;
             tries = 3
-            alert("Game Over. You Lost");
+            alert("You went over the third time. Game Over. You Lost");
             reset();
         }
     });
@@ -86,15 +92,15 @@ $(document).ready(function(){
             wins++;
             $("#wins").text("Wins: " + wins);
             reset();
-        } else if (computercount < playercount && tries > 0) {
+        } else if (computercount < playercount && tries > 1) {
             alert("You went over. Try again!");
             tries--;
             $("#tries").text("Tries: " + tries);
             reset();
-        } else if (computercount > playercount && tries === 0) {
+        } else if (computercount < playercount && tries == 1) {
             losses++;
             tries = 3
-            alert("Game Over. You Lost");
+            alert("You went over the third time. Game Over. You Lost");
             reset();
         }
     });
@@ -108,15 +114,15 @@ $(document).ready(function(){
             wins++;
             $("#wins").text("Wins: " + wins);
             reset();
-        } else if (computercount < playercount && tries > 0) {
+        } else if (computercount < playercount && tries > 1) {
             alert("You went over. Try again!");
             tries--;
             $("#tries").text("Tries: " + tries);
             reset();
-        } else if (computercount > playercount && tries === 0) {
+        } else if (computercount < playercount && tries == 1) {
             losses++;
             tries = 3
-            alert("Game Over. You Lost");
+            alert("You went over the third time. Game Over. You Lost");
             $("#tries").text()
             reset();
         }
@@ -131,15 +137,15 @@ $(document).ready(function(){
             wins++;
             $("#wins").text("Wins: " + wins);
             reset();
-        } else if (computercount < playercount && tries > 0) {
+        } else if (computercount < playercount && tries > 1) {
             alert("You went over. Try again!");
             tries--;
             $("#tries").text("Tries: " + tries);
             reset();
-        } else if (computercount > playercount && tries === 0) {
+        } else if (computercount < playercount && tries == 1) {
             losses++;
             tries = 3
-            alert("Game Over. You Lost");
+            alert("You went over the third time. Game Over. You Lost");
             reset();
         }
     });
@@ -153,15 +159,15 @@ $(document).ready(function(){
             wins++;
             $("#wins").text("Wins: " + wins);
             reset();
-        } else if (computercount < playercount && tries > 0) {
+        } else if (computercount < playercount && tries > 1) {
             alert("You went over. Try again!");
             tries--;
             $("#tries").text("Tries: " + tries);
             reset();
-        }  else if (computercount > playercount && tries === 0) {
+        }  else if (computercount < playercount && tries == 1) {
             losses++;
             tries = 3
-            alert("Game Over. You Lost");
+            alert("You went over the third time. Game Over. You Lost");
             reset();
         }
     });
@@ -175,15 +181,15 @@ $(document).ready(function(){
             wins++;
             $("#wins").text("Wins: " + wins);
             reset();
-        } else if (computercount < playercount && tries > 0) {
+        } else if (computercount < playercount && tries > 1) {
             alert("You went over. Try again!");
             tries--;
             $("#tries").text("Tries: " + tries);
             reset();
-        } else if (computercount > playercount && tries === 0) {
+        } else if (computercount < playercount && tries == 1) {
             losses++;
             tries = 3
-            alert("Game Over. You Lost");
+            alert("You went over the third time. Game Over. You Lost");
             reset();
         }
     });
@@ -197,30 +203,35 @@ $(document).ready(function(){
             wins++;
             $("#wins").text("Wins: " + wins);
             reset();
-        } else if (computercount < playercount && tries > 0) {
+        } else if (computercount < playercount && tries > 1) {
             alert("You went over. Try again!");
             tries--;
             $("#tries").text("Tries: " + tries);
             reset();
-        } else if (computercount > playercount && tries === 0) {
+        } else if (computercount < playercount && tries == 1) {
             losses++;
             tries = 3
-            alert("Game Over. You Lost");
+            alert("You went over the third time. Game Over. You Lost");
             reset();
         }
     });
 
+    $("#wishbutton").ready(function() {
+        if (wins == 1) {
+            $("#wishbutton").show();
+        }
+    })
    
     
     function reset() {
-        randomComputer = Math.floor(Math.random() * 700 + 120);
+        randomComputer = Math.floor(Math.random() * 10 + 100);
         firstball = Math.floor(Math.random() * 10+1);
-        twoball = Math.floor(Math.random() * 25);
-        threeball = Math.floor(Math.random() * 50);
-        fourball = Math.floor(Math.random() * 75);
-        fiveball = Math.floor(Math.random() * 100);
-        sixball = Math.floor(Math.random() * 125);
-        sevenball = Math.floor(Math.random() * 150);
+        twoball = Math.floor(Math.random() * 10+1);
+        threeball = Math.floor(Math.random() * 10+1);
+        fourball = Math.floor(Math.random() * 10+1);
+        fiveball = Math.floor(Math.random() * 10+1);
+        sixball = Math.floor(Math.random() * 10+1);
+        sevenball = Math.floor(Math.random() * 10+1);
         computercount = randomComputer;
         playercount = 0;
         $("#computergoal").text(computercount);
