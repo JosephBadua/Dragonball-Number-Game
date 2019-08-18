@@ -107,7 +107,7 @@ $(document).ready(function() {
         )
       });
    
-    
+
 var teleport = new Audio ("../unit-4-game/assets/DBZSOUNDEFFECTINSTANTTRANSMISSION.mp3");
 var selectfighter = new Audio ("../unit-4-game/assets/fighterselect.mp3");
 });
