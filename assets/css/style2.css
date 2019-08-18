@@ -1,0 +1,284 @@
+@font-face {
+    font-family: dbz;
+    src: url("../../../unit-4-game/assets/css/Saiyan-Sans.ttf");
+}
+body {
+    font-family: dbz;
+    overflow: hidden;
+    background: black;
+}
+.button {
+    background-image: linear-gradient(to right, yellow, red, orange);
+    border: 3px solid red;
+    border-radius: 2em;
+    position: absolute;
+    left: 5.8em;
+    top: 3.7em;
+    font-size: 7em;
+    color: white;
+    letter-spacing: -1px;
+    z-index: 100;
+    opacity: 1;
+}
+.mainimage {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+.left {
+    background: black;
+    position: absolute;
+    width: 49.8%;
+    border-right: 5px solid red;;
+    height: 100%;
+    left: -60em;
+}
+.right {
+    background: black;
+    position: absolute;
+    width: 49.8%;
+    border-left: 5px solid yellow;;
+    height: 100%;
+    right: -60em;
+}
+.welcome {
+    position: absolute;
+    top: 0em;
+    color: white;
+    right: 0em;
+    font-size: 8em;
+}
+.compete {
+    position: absolute;
+    top: 1.5em;
+    color: white;
+    right: 0em;
+    font-size: 5em;
+}
+.games {
+    position: absolute;
+    top: 0em;
+    color: green;
+    left: 0em;
+    font-size: 11em;
+}
+.instruct {
+    position: absolute;
+    top: 2.5em;
+    color: red;
+    left: 1.2em;
+    font-size: 8em;
+}
+.instructions {
+    position: absolute;
+    list-style-type: disc;
+    top: 8.5em;
+    color: red;
+    left: 2.5em;
+    font-size: 3.5em;
+}
+li {
+    padding: 10px;
+}
+.gamestart {
+    position: absolute;
+    top: 3em;
+    border: 5px solid red;
+    border-radius: 5em;
+    color: blue;
+    right: 0.5em;
+    font-size: 10em;
+    word-spacing: -10px;
+}
+.gamestart:hover {
+    box-shadow: 0px 5px 5px 15px yellow;
+}
+.opponentimage {
+    background: black;
+    position: absolute;
+    left: 0.1em;
+    top: 5em;
+    height: 20em;
+    width: 40em;
+    border: 5px solid black;
+}
+.fighterimage {
+    background: black;
+    position: absolute;
+    right: 0.1em;
+    top: 5em;
+    height: 20em;
+    width: 40em;
+    border: 5px solid black;
+}
+.opp1 {
+    position: absolute;
+    left: 4em;
+    top: 30em;
+    width: 15%;
+    height: 20%;
+}
+.imgone {
+    height: 100%;
+    width: 100%;
+}
+.opp {
+    border: 5px solid black;
+    border-radius: 15px 15px;
+}
+.opp2 {
+    background: black;
+    color: white;
+    position: absolute;
+    left: 24.5em;
+    top: 30em;
+    width: 15%;
+    height: 20%;
+}
+.opp3 {
+    background: black;
+    color: white;
+    position: absolute;
+    left: 14.5em;
+    top: 43em;
+    width: 15%;
+    height: 20%;
+}
+.opp:hover {
+    box-shadow: 0px 5px 5px 15px #ffd900;
+}
+.fighter1 {
+    position: absolute;
+    right: 5em;
+    top: 30em;
+    width: 15%;
+    height: 20%;
+}
+.fighter2 {
+    background: black;
+    color: white;
+    position: absolute;
+    right: 24.5em;
+    top: 30em;
+    width: 15%;
+    height: 20%;
+}
+.fighter3 {
+    background: black;
+    color: white;
+    position: absolute;
+    right: 14.5em;
+    top: 43em;
+    width: 15%;
+    height: 20%;
+}
+.fight {
+    border: 5px solid black;
+    border-radius: 15px 15px;
+}
+.fight:hover {
+    box-shadow: 0px 5px 5px 15px #ffd900;
+}
+
+.imgtwo {
+    height: 100%;
+    width: 100%;
+}
+h2 {
+    font-size: 10em;
+    margin-left: 50px;
+}
+.question {
+    position: absolute;
+    left: 43.5em;
+    top: 43em;
+    width: 1%;
+    height: 20%;
+    animation-name: left;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+}
+
+.imgthree {
+    height: 200px;
+    width: 100px;
+}
+.cell {
+    height: 90%;
+}
+.cellsprite {
+    position: absolute;
+    left: 40.5em;
+    top: 43em;
+    width: 10%;
+    height: 30%;
+    animation-name: left;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+}
+@keyframes left {
+    0% {top: 700px; left: 600px;}
+    25% {top: 700px; left: 620px;}
+    50% {top: 700px; left: 620px;}
+    75% {top: 700px; left: 620px}
+    100% {top: 700px; left: 600px;}
+}
+
+.gokuss {
+    position: absolute;
+    right: 40.5em;
+    top: 43em;
+    width: 1%;
+    height: 20%;
+    animation-name: right;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+}
+.gokublue {
+    position: absolute;
+    right: 40.5em;
+    top: 43em;
+    width: 1%;
+    height: 20%;
+    animation-name: right;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+}
+.question1 {
+    position: absolute;
+    right: 43.5em;
+    top: 43em;
+    width: 1%;
+    height: 20%;
+    animation-name: right;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+}
+
+@keyframes right {
+    0% {top: 700px; right: 700px;}
+    25% {top: 700px; right: 720px;}
+    50% {top: 700px; right: 720px;}
+    75% {top: 700px; right: 720px}
+    100% {top: 700px; right: 700px;}
+}
+.charactertitle {
+    background: white;
+    color: black;
+    position: absolute;
+    right: 45em;
+    top: 10em;
+    height: 21em;
+    width: 30em;
+    border: 5px solid red;
+    border-radius: 5em;
+}
+.character {
+    text-align: center;
+    font-size: 7.1em;
+}

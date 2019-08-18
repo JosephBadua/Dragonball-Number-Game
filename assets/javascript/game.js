@@ -12,6 +12,7 @@ var ballfive = 0
 var ballsix = 0
 var ballseven = 0
 
+
 var randomComputer = Math.floor(Math.random() * 10 + 100);
 var firstball = Math.floor(Math.random() * 10+1);
 var twoball = Math.floor(Math.random() * 10+1);
@@ -20,6 +21,7 @@ var fourball = Math.floor(Math.random() * 10+1);
 var fiveball = Math.floor(Math.random() * 10+1);
 var sixball = Math.floor(Math.random() * 10+1);
 var sevenball = Math.floor(Math.random() * 10+1);
+
 
 
 
@@ -42,7 +44,9 @@ $(document).ready(function(){
     $(".maincount").hide();
     $(".playercount").hide();
     $(".score").hide();
-    $(".wishbutton").hide();
+    $(".rpggame").hide();
+    $(".cell2").hide();
+    $(".newgame").hide();
     $("#button").click(function() {
         $("#introtext").hide();
         $(".shenron").show();
@@ -53,6 +57,7 @@ $(document).ready(function(){
         $(".playercount").show();
         $(".maincount").show();
         $(".playercount").show();
+        $(".rpggame").show();
         $(".score").show();        
         $("#wins").text("Wins " + wins);
         $("#losses").text("Losses: " + losses);
@@ -65,7 +70,13 @@ $(document).ready(function(){
         ballone = firstball;
         playercount += ballone;
         $("#numbgoal").text(playercount);
-        if (computercount == playercount) {
+        $("#numbgoal").text(playercount);
+         if (computercount == playercount && wins == 2) {
+            wins++;
+            tries = 3
+            alert("You won three games! Click on Shenron's face to ask your wish!");
+            reset();
+        } else if (computercount == playercount) {
             alert("You won! Keep Going!");
             wins++;
             $("#wins").text("Wins: " + wins);
@@ -87,7 +98,13 @@ $(document).ready(function(){
         balltwo = twoball;
         playercount += balltwo;
         $("#numbgoal").text(playercount);
-        if (computercount == playercount) {
+        $("#numbgoal").text(playercount);
+         if (computercount == playercount && wins == 2) {
+            wins++;
+            tries = 3
+            alert("You won three games! Click on Shenron's face to ask your wish!");
+            reset();
+        } else if (computercount == playercount) {
             alert("You won! Keep Going!");
             wins++;
             $("#wins").text("Wins: " + wins);
@@ -109,7 +126,13 @@ $(document).ready(function(){
         ballthree = threeball;
         playercount += ballthree;
         $("#numbgoal").text(playercount);
-        if (computercount == playercount) {
+        $("#numbgoal").text(playercount);
+         if (computercount == playercount && wins == 2) {
+            wins++;
+            tries = 3
+            alert("You won three games! Click on Shenron's face to ask your wish!");
+            reset();
+        } else if (computercount == playercount) {
             alert("You won! Keep Going!");
             wins++;
             $("#wins").text("Wins: " + wins);
@@ -123,7 +146,6 @@ $(document).ready(function(){
             losses++;
             tries = 3
             alert("You went over the third time. Game Over. You Lost");
-            $("#tries").text()
             reset();
         }
     });
@@ -132,7 +154,13 @@ $(document).ready(function(){
         ballfour = fourball;
         playercount += ballfour;
         $("#numbgoal").text(playercount);
-        if (computercount == playercount) {
+        $("#numbgoal").text(playercount);
+         if (computercount == playercount && wins == 2) {
+            wins++;
+            tries = 3
+            alert("You won three games! Click on Shenron's face to ask your wish!");
+            reset();
+        } else if (computercount == playercount) {
             alert("You won! Keep Going!");
             wins++;
             $("#wins").text("Wins: " + wins);
@@ -154,7 +182,13 @@ $(document).ready(function(){
         ballfive = fiveball;
         playercount += ballfive;
         $("#numbgoal").text(playercount);
-        if (computercount == playercount) {
+        $("#numbgoal").text(playercount);
+         if (computercount == playercount && wins == 2) {
+            wins++;
+            tries = 3
+            alert("You won three games! Click on Shenron's face to ask your wish!");
+            reset();
+        } else if (computercount == playercount) {
             alert("You won! Keep Going!");
             wins++;
             $("#wins").text("Wins: " + wins);
@@ -164,7 +198,7 @@ $(document).ready(function(){
             tries--;
             $("#tries").text("Tries: " + tries);
             reset();
-        }  else if (computercount < playercount && tries == 1) {
+        } else if (computercount < playercount && tries == 1) {
             losses++;
             tries = 3
             alert("You went over the third time. Game Over. You Lost");
@@ -176,7 +210,13 @@ $(document).ready(function(){
         ballsix = sixball;
         playercount += ballsix;
         $("#numbgoal").text(playercount);
-        if (computercount == playercount) {
+        $("#numbgoal").text(playercount);
+         if (computercount == playercount && wins == 2) {
+            wins++;
+            tries = 3
+            alert("You won three games! Click on Shenron's face to ask your wish!");
+            reset();
+        } else if (computercount == playercount) {
             alert("You won! Keep Going!");
             wins++;
             $("#wins").text("Wins: " + wins);
@@ -198,7 +238,12 @@ $(document).ready(function(){
         ballseven = sevenball;
         playercount += ballseven;
         $("#numbgoal").text(playercount);
-        if (computercount == playercount) {
+         if (computercount == playercount && wins == 2) {
+            wins++;
+            tries = 3
+            alert("You won three games! Click on Shenron's face to ask your wish!");
+            reset();
+        } else if (computercount == playercount) {
             alert("You won! Keep Going!");
             wins++;
             $("#wins").text("Wins: " + wins);
@@ -215,13 +260,14 @@ $(document).ready(function(){
             reset();
         }
     });
+    
+    $(".rpggame").click(function() {
+        disappear();
 
-    $("#wishbutton").ready(function() {
-        if (wins == 1) {
-            $("#wishbutton").show();
-        }
+        
     })
-   
+    
+   var teleport = new Audio ("../unit-4-game/assets/DBZSOUNDEFFECTINSTANTTRANSMISSION.mp3");
     
     function reset() {
         randomComputer = Math.floor(Math.random() * 10 + 100);
@@ -239,6 +285,31 @@ $(document).ready(function(){
         $("#tries").text("tries: " + tries);
         $("#losses").text("losses: " + losses);
     }
-  
+    function disappear() {
+        $(".cellone").animate({opacity:1}, 'fast');
+        $(".cellone").animate({opacity:0}, 'fast');
+        teleport.play(); 
+        setTimeout( function() {
+            $(".celltwo").animate({opacity:1}, "fast");
+            $(".celltwo").animate({opacity:0}, "fast");
+            teleport.play();
+        }, 1000);
+        setTimeout( function() {
+            $(".cellfinal").animate({opacity:1}, "fast");
+            teleport.play();
+            $(".dbball").animate({opacity: '0.0'}, 1000, 'linear');
+            $(".cellfinal").animate({opacity:0}, "fast");    
+        }, 2000);
+        setTimeout( function() {
+            alert("Oh No! Cell has taken the dragonballs. Chase After Him!");   
+        }, 3000);
+        setTimeout( function() {
+            $(".newgame").show();  
+        }, 4000);
+       
+    }
+    
+ 
+   
 
-});
+}); 
