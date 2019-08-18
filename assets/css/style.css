@@ -1,3 +1,6 @@
+html {
+    zoom: 67%;
+}
 @font-face {
     font-family: dbz;
     src: url('../css/Saiyan-Sans.ttf');
