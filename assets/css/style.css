@@ -1,6 +1,3 @@
-html {
-    zoom: 67%;
-}
 @font-face {
     font-family: dbz;
     src: url('../css/Saiyan-Sans.ttf');
@@ -9,7 +6,7 @@ html {
 body {
     font-family: dbz;
     overflow: hidden;
-    background: black;
+    zoom: 67%;
 }
 .backimage {
     position: absolute;
