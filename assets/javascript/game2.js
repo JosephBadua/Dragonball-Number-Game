@@ -11,6 +11,11 @@ var cell = {
     attackPoints: 10,
 };
 $(document).ready(function() {
+    $('#video')[0].load();
+    $('#video1')[0].load();
+    $('#video2')[0].load();
+    $('#video4')[0].load();
+    $('#video3')[0].load();
     $(".button6").hide();
     $(".wish1").hide();
     $(".dragon").hide();
