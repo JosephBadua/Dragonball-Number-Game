@@ -1,3 +1,6 @@
+var char1 = false;
+var char2 = false;
+
 var goku = {
     healthPoints: 100,
     attackPoints: 5,
@@ -8,6 +11,8 @@ var cell = {
     attackPoints: 10,
 };
 $(document).ready(function() {
+    $(".gokustat").hide();
+    $(".cellstat").hide();
     $(".left").hide();
     $(".right").hide();
     $(".mainimage").hide();
@@ -21,6 +26,7 @@ $(document).ready(function() {
     $(".question").hide();
     $(".gokuss").hide();
     $(".gokublue").hide();
+    $(".startfight").hide();
     $("#button").click(function() {
         teleport.play();
         $(".left").show();
@@ -40,6 +46,7 @@ $(document).ready(function() {
         $(".fighterimage").show();
         $(".opp").show();
         $(".fight").show();
+        $(".startfight").show();
 
     });
     $(".opp2").hover(function() {
@@ -62,6 +69,7 @@ $(document).ready(function() {
         $(".opp3").hide();
         $(".opp1").hide();
         teleport.play();
+        char1 = true;
     });
     $(".fighter1").hover(function() {
         $(".gokuss").show();
@@ -82,9 +90,24 @@ $(document).ready(function() {
         $(".fighter1").hide();
         $(".fighter2").hide();
         $(".fighter3").hide();
+        teleport.play();   
+        char2 = true; 
     });
+    $(".startfight").click(function() {
+        if (char1 == true && char2 == true) {
+        selectfighter.pause();
+        $(".gokustat").show();
+        $(".cellstat").show();
+        $(".charactertitle").hide();
+        $(".startfight").hide();
+        teleport.play();
 
-
+        } else (
+            alert("You need to select two characters before starting")
+        )
+      });
+   
+    
 var teleport = new Audio ("../unit-4-game/assets/DBZSOUNDEFFECTINSTANTTRANSMISSION.mp3");
 var selectfighter = new Audio ("../unit-4-game/assets/fighterselect.mp3");
 });
