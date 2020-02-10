@@ -57,9 +57,7 @@ body {
     position: absolute;
     border-radius: 15em;
     color: white;
-    top: 11em;
-    left: 19em;
-    z-index: 20;
+    display: block;
     text-align: center;
     background-image: linear-gradient(to right, red, yellow, orange);
 }
